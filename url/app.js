@@ -36,8 +36,6 @@ const saveLinks = async (links) => {
 
 const server = createServer(async (req, res) => {
   if (req.method === 'GET') {
-    console.log('req.url:', req.url);
-
     if (req.url === '/') {
       return serverFile(res, path.join('public', 'index.html'), 'text/html');
     } else if (req.url === '/style.css') {
